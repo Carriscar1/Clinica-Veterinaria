@@ -5,6 +5,8 @@ CODE DO SQL (PRECISA SER MUDADO)
 CREATE DATABASE clinica veterinária
 USE clinica veterinária
 
+
+
 CREATE TABLE Veterinario (
     CRV CHAR(6) PRIMARY KEY,
     Nome VARCHAR(100) NOT NULL,
@@ -12,6 +14,11 @@ CREATE TABLE Veterinario (
     Celular VARCHAR(9),
     CPF CHAR(11) NOT NULL
 );
+
+
+
+
+
 CREATE TABLE Cliente (
     CPF CHAR(11) PRIMARY KEY,
     Nome VARCHAR(30) NOT NULL,
@@ -19,6 +26,10 @@ CREATE TABLE Cliente (
     Telefone VARCHAR(15) NOT NULL,
     Celular VARCHAR(10) NOT NULL
 );
+
+
+
+
 CREATE TABLE Animal (
     ID_Animal INT PRIMARY KEY,
     Nome VARCHAR(50),
@@ -29,6 +40,10 @@ CREATE TABLE Animal (
     CPF_Cliente CHAR(11) NOT NULL,
     FOREIGN KEY (CPF_Cliente) REFERENCES Cliente(CPF)
 );
+
+
+
+
 CREATE TABLE Alimentacao (
     ID_Animal INT PRIMARY KEY,
     Herbivoro BOOLEAN NOT NULL,
@@ -36,8 +51,13 @@ CREATE TABLE Alimentacao (
     Onivoro BOOLEAN NOT NULL,
     Peso DECIMAL(6,2) NOT NULL,
     Altura DECIMAL(4,2) NOT NULL,
-    FOREIGN KEY (ID_Animal) REFERENCES Animal(ID_Animal)
+    FOREIGN KE
+    Y (ID_Animal) REFERENCES Animal(ID_Animal)
 );
+
+
+
+
 CREATE TABLE Consulta (
     ID INT AUTO_INCREMENT PRIMARY KEY,
     DataHora DATETIME NOT NULL,
