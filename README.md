@@ -1,4 +1,4 @@
-CODE DO SQL (PRECISA SER MUDADO)
+CODE DO SQL (Correto)
 
 
 
@@ -38,6 +38,8 @@ CREATE TABLE Animal (
     Idade INT,
     Alergico BOOLEAN NOT NULL,
     CPF_Cliente CHAR(11) NOT NULL,
+    Peso DECIMAL(6,2) NOT NULL,
+    Altura DECIMAL(4,2) NOT NULL,
     FOREIGN KEY (CPF_Cliente) REFERENCES Cliente(CPF)
 );
 
@@ -49,10 +51,7 @@ CREATE TABLE Alimentacao (
     Herbivoro BOOLEAN NOT NULL,
     Carnivoro BOOLEAN NOT NULL,
     Onivoro BOOLEAN NOT NULL,
-    Peso DECIMAL(6,2) NOT NULL,
-    Altura DECIMAL(4,2) NOT NULL,
-    FOREIGN KE
-    Y (ID_Animal) REFERENCES Animal(ID_Animal)
+    FOREIGN KEY (ID_Animal) REFERENCES Animal(ID_Animal)
 );
 
 
